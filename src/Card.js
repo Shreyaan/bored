@@ -4,7 +4,7 @@ export default function Card(props) {
   return (
     <div className="card">
       <div className="card-body">
-        <h5 className="card-title">Try New Activity</h5>
+        <h5 className="card-title"> New Activity</h5>
         <p className="card-text">
           Name - {props.apiResult.activity} <br />
         </p>
@@ -18,7 +18,7 @@ export default function Card(props) {
         <p>
             {props.apiResult.link && (
             
-                <a href={props.apiResult.link} className="btn btn-info">
+                <a href={props.apiResult.link} className="btn btn-info atag">
                   {" "}
                   {props.apiResult.link}{" "}
                 </a>
