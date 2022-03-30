@@ -14,9 +14,18 @@ function App() {
   const [apiResult, setApiResult] = React.useState([]);
   const [progress, setProgress] = React.useState(true);
 
+  const [value, setValue] = React.useState("any");
+
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
+
+  let valueString = `?type=${value}`
+  if(value == 'any') valueString =''
+
   var config = {
     method: "get",
-    url: "https://www.boredapi.com/api/activity/",
+    url: `https://www.boredapi.com/api/activity${valueString}`,
     headers: {},
   };
 
@@ -42,8 +51,6 @@ function App() {
 
   AOS.init();
 
-// You can also pass an optional settings object
-// below listed default settings
 AOS.init({
   // Global settings:
   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -74,7 +81,7 @@ AOS.init({
         {progress ? (
           <img data-aos="fade-in"  src={spinner} />
         ) : (
-          <Card  apiCall={triggerApi} apiResult={apiResult} />
+          <Card value={value} handleChange={handleChange} apiCall={triggerApi} apiResult={apiResult} />
         )}
       </div>
     </div>

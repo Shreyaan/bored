@@ -1,6 +1,8 @@
 import React from "react";
 
 export default function Card(props) {
+ 
+
   return (
     <div data-aos="zoom-in" className="card">
       <div className="card-body">
@@ -15,7 +17,7 @@ export default function Card(props) {
           Type - {props.apiResult.type} <br />
         </p>
         <p className="card-text">
-        Participants - {props.apiResult.participants} <br />
+          Participants - {props.apiResult.participants} <br />
         </p>
 
         <p>
@@ -30,6 +32,26 @@ export default function Card(props) {
           {" "}
           Get new activity
         </button>
+        <div>
+          select type
+          <select
+            value={props.value}
+            onChange={props.handleChange}
+            className="btn dropdown-custom"
+          >
+            <option value="any">any</option>
+            <option value="education">education</option>
+            <option value="recreational">recreational</option>
+            <option value="social">social</option>
+            <option value="diy">diy</option>
+            <option value="charity">charity</option>
+            <option value="cooking">cooking</option>
+            <option value="relaxation">relaxation</option>
+            <option value="music">music</option>
+            <option value="busywork">busywork</option>
+          </select>
+      
+        </div>
       </div>
     </div>
   );
