@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Card(props) {
   return (
-    <div className="card">
+    <div data-aos="zoom-in" className="card">
       <div className="card-body">
         <h5 className="card-title"> New Activity</h5>
         <p className="card-text">
