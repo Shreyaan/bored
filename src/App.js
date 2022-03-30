@@ -59,7 +59,7 @@ AOS.init({
   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
   offset: 120, // offset (in px) from the original trigger point
   delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 1000, // values from 0 to 3000, with step 50ms
+  duration: 500, // values from 0 to 3000, with step 50ms
   easing: 'ease', // default easing for AOS animations
   once: false, // whether animation should happen only once - while scrolling down
   mirror: false, // whether elements should animate out while scrolling past them
@@ -69,7 +69,7 @@ AOS.init({
 
   return (
     <div className="container">
-      <h1 data-aos="fade-in" >Getting bored?? Try an new activity</h1>
+      <h1 data-aos="fade-in"  data-aos-duration="2000" >Getting bored?? Try an new activity</h1>
       <div data-aos="fade-in" data-aos-duration="2000">
         {progress ? (
           <img data-aos="fade-in"  src={spinner} />
