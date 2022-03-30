@@ -69,7 +69,7 @@ AOS.init({
 
   return (
     <div className="container">
-      <h1 data-aos="zoom-in"  data-aos-duration="200" >Getting bored?? Try an new activity</h1>
+      <h1 data-aos="zoom-in"  data-aos-duration="200" >Getting bored?? Try a new activity</h1>
       <div data-aos="fade-in" data-aos-duration="2000">
         {progress ? (
           <img data-aos="fade-in"  src={spinner} />
