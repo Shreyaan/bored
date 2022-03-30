@@ -13,7 +13,7 @@ function App() {
 
   var config = {
     method: "get",
-    url: "https://www.boredapi.com/api/activity?minaccessibility=0&maxaccessibility=0.5",
+    url: "https://www.boredapi.com/api/activity/",
     headers: {},
   };
 

@@ -9,10 +9,13 @@ export default function Card(props) {
           Name - {props.apiResult.activity} <br />
         </p>
         <p className="card-text">
-          Price - ₹{props.apiResult.price * 700} <br />
+          Price - ₹{props.apiResult.price * 800} <br />
         </p>
         <p className="card-text">
           Type - {props.apiResult.type} <br />
+        </p>
+        <p className="card-text">
+        Participants - {props.apiResult.participants} <br />
         </p>
 
         <p>
