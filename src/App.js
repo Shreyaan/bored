@@ -4,7 +4,7 @@ import spinner from "./Spinner.svg";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 
-import Card from "./Card.js"
+import Card from "./Card.js";
 
 var axios = require("axios");
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
   var config = {
     method: "get",
-    url: "http://www.boredapi.com/api/activity?minaccessibility=0&maxaccessibility=0.5",
+    url: "https://www.boredapi.com/api/activity?minaccessibility=0&maxaccessibility=0.5",
     headers: {},
   };
 
@@ -21,7 +21,7 @@ function App() {
     axios(config)
       .then(function (response) {
         setApiResult(response.data);
-        setProgress(false)
+        setProgress(false);
       })
       .catch(function (error) {
         console.log(error);
@@ -32,15 +32,18 @@ function App() {
     apiCall();
   }, []);
 
-  function triggerApi(){
-    setProgress(true)
+  function triggerApi() {
+    setProgress(true);
     apiCall();
   }
 
   return (
     <div className="container">
-   {   progress  ?  <img src={spinner} /> : <Card  apiCall={triggerApi} apiResult={apiResult}/> }
-     
+      {progress ? (
+        <img src={spinner} />
+      ) : (
+        <Card apiCall={triggerApi} apiResult={apiResult} />
+      )}
     </div>
   );
 }
