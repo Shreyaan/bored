@@ -16,14 +16,12 @@ export default function Card(props) {
         </p>
 
         <p>
-            {props.apiResult.link && (
-            
-                <a href={props.apiResult.link} className="btn btn-info atag">
-                  {" "}
-                  {props.apiResult.link}{" "}
-                </a>
-            
-            )}
+          {props.apiResult.link && (
+            <a href={props.apiResult.link} className="btn btn-info atag">
+              {" "}
+              {props.apiResult.link}{" "}
+            </a>
+          )}
         </p>
         <button className="btn btn-primary" onClick={props.apiCall}>
           {" "}
