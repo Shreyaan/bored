@@ -39,10 +39,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>
-        Getting bored??
-        Try an new activity
-      </h1>
+      <h1>Getting bored?? Try an new activity</h1>
       {progress ? (
         <img src={spinner} />
       ) : (
